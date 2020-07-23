@@ -191,10 +191,6 @@ public class ArticleListActivity extends ActionBarActivity implements
             Picasso.get().load(mCursor.getString(ArticleLoader.Query.THUMB_URL))
                     .placeholder(R.drawable.empty_detail)
                     .into(holder.thumbNailImageView);
-//            holder.thumbnailView.setImageUrl(
-//                    mCursor.getString(ArticleLoader.Query.THUMB_URL),
-//                    ImageLoaderHelper.getInstance(ArticleListActivity.this).getImageLoader());
-//            holder.thumbnailView.setAspectRatio(mCursor.getFloat(ArticleLoader.Query.ASPECT_RATIO));
         }
 
         @Override
@@ -204,7 +200,7 @@ public class ArticleListActivity extends ActionBarActivity implements
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-//        public DynamicHeightNetworkImageView thumbnailView;
+
         public ImageView thumbNailImageView;
         public TextView titleView;
         public TextView subtitleView;
@@ -212,7 +208,7 @@ public class ArticleListActivity extends ActionBarActivity implements
 
         public ViewHolder(View view) {
             super(view);
-//            thumbnailView = (DynamicHeightNetworkImageView) view.findViewById(R.id.thumbnail);
+
             thumbNailImageView = (ImageView) view.findViewById(R.id.thumbnail);
             titleView = (TextView) view.findViewById(R.id.article_title);
             subtitleView = (TextView) view.findViewById(R.id.article_subtitle);
