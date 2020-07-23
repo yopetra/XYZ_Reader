@@ -1,0 +1,103 @@
+<com.example.xyzreader.ui.DrawInsetsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/draw_insets_frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.xyzreader.ui.ObservableScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/photo_container"
+                android:layout_width="match_parent"
+                android:layout_height="349dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/photo_placeholder">
+                <!--suppress AndroidLintContentDescription -->
+                <ImageView
+                    android:id="@+id/photo"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:src="@drawable/cake"
+                     />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/photo_background_protection" />
+
+            </FrameLayout>
+
+            <com.example.xyzreader.ui.MaxWidthLinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/photo_container"
+                android:maxWidth="@dimen/detail_card_max_width"
+                android:background="#fff"
+                android:elevation="2dp">
+
+                <LinearLayout
+                    android:id="@+id/meta_bar"
+                    style="@style/metabar_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/article_title"
+                        style="?android:attr/textAppearanceLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/detail_title_text_size"
+                        tools:text="Title of article"
+                        android:lineSpacingMultiplier="0.9" />
+
+                    <TextView
+                        android:id="@+id/article_byline"
+                        style="@style/text_article_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Article text" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/article_body"
+                    style="@style/text_article_body_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="This is an example of the text in the body."
+                    android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier" />
+
+            </com.example.xyzreader.ui.MaxWidthLinearLayout>
+        </android.support.constraint.ConstraintLayout>
+    </com.example.xyzreader.ui.ObservableScrollView>
+
+    <ImageButton android:id="@+id/share_fab"
+        android:stateListAnimator="@anim/fab_state_list_anim"
+        android:background="@drawable/add_fab_background"
+        style="@style/button_fab_detail"
+        android:layout_gravity="bottom|end"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:src="@drawable/ic_share"
+        android:elevation="@dimen/fab_elevation"
+        android:contentDescription="@string/action_share" />
+
+</com.example.xyzreader.ui.DrawInsetsFrameLayout>
