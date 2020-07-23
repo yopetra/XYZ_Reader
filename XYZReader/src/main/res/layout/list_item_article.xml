@@ -4,9 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/card_view"
-    app:cardCornerRadius="5dp"
-    style="@style/CardView"
-    android:foreground="?selectableItemBackground">
+    tools:backgroundTint="@android:color/darker_gray"
+    app:cardCornerRadius="3dp"
+    style="@style/item_of_card">
+
+<!--    android:foreground="?selectableItemBackground"-->
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
