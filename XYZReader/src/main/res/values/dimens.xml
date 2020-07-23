@@ -8,4 +8,11 @@
     <dimen name="fab_press_translation_z">6dp</dimen>
     <dimen name="fab_margin">24dp</dimen>
 
+    <dimen name="small_margin">5dp</dimen>
+    <dimen name="elevation_of_card">2dp</dimen>
+
+    <item name="max_lines" format="integer" type="fraction">2</item>
+    <dimen name="normal_padding">16dp</dimen>
+    <dimen name="title_text_size">20sp</dimen>
+
 </resources>

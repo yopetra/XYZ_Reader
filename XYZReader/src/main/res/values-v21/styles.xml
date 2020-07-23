@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="item_of_card">
+
+        <item name="android:layout_margin">@dimen/small_margin</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:foreground">?selectableItemBackground</item>
+        <item name="android:elevation">@dimen/elevation_of_card</item>
+
+
+    </style>
+</resources>
