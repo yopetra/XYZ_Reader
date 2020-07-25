@@ -1,4 +1,6 @@
-= XYZ Reader Starter Code
+# Project overview
+
+XYZ Reader Starter App uses material desing pattern.
 
 This repository stores the starter code for the XYZ Reader project in Udacity's Android Nanodegree.
 
